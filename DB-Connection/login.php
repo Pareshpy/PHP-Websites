@@ -23,30 +23,32 @@
         </nav>
     </header>
     <div class="container glass" style="height: 500px;">
-        <div class="form">
+        <form name="form" action="checklogin.php" method="POST">
+            <div class="form">
+                <br>
+                <br>
+                <h1>Login to Leaf Village</h1>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="formGroup">
+                <input type="text" name="username" id="user name" placeholder="User Name" autocomplete="off">
+            </div>
+            <div class="formGroup">
+                <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">
+                <!-- <button id="showPasswordBtn">Show Password</button>  need java script will add it later-->
+            </div>
             <br>
-            <br>
-            <h1>Login to Leaf Village</h1>
-            <br>
-            <br>
-            <br>
-        </div>
-        <div class="formGroup">
-            <input type="text" name="name" id="user name" placeholder="User Name" autocomplete="off">
-        </div>
-        <div class="formGroup">
-            <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">
-            <!-- <button id="showPasswordBtn">Show Password</button>  need java script will add it later-->
-        </div>
-        <br>
-        <div class="formGroup">
-            <button class="signup">
-                Login
-            </button>
-        </div>
+            <div class="formGroup">
+                <button class="signup" value="login" name="submit">
+                    Login
+                </button>
+            </div>
+        </form>
         <div class="formGroup">
             <p style="left: 170px;bottom: 70px;">Not have a account ? |</p>
-            <a style="left: 361px;bottom: 70px;" href="signup.html">Sign up</a>
+            <a style="left: 361px;bottom: 70px;" href="signup.php">Sign up</a>
         </div>
     </div>
 

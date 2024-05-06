@@ -9,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    background-image: url('image-1.png');
+    background-image: url('../DB-Connection/Photos/image-1.png');
     background-size: cover;
     background-position: center;
 }

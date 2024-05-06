@@ -16,7 +16,7 @@
 <body>
     <header class="header">
         <a href="home.php" class="logo">Leaf
-            <img class="Leaf" src="logo.png" alt="logo">
+            <img class="Leaf" src="../DB-Connection/Photos/logo.png" alt="logo">
         </a>
         <nav class="navbar">
             <a href="signup.php">Sign Up</a>

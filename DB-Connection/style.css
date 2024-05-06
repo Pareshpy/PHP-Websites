@@ -59,7 +59,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: #fff;
+    background: #ffffff;
     transition: .3s;
 }
 
@@ -78,14 +78,15 @@ body {
 }
 
 .container {
-    position: relative;
+    position: absolute;
     display: flex;
     /* justify-content: center; */
     align-items: center;
-    left: 464px;
-    top: 60px;
-    width: 40%;
-    height: 530px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 81px;
+    width: 35%;
+    height: 525px;
     flex-direction: column;
 }
 
@@ -98,6 +99,7 @@ body {
 .formGroup {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .formGroup input {
@@ -112,22 +114,29 @@ body {
 }
 
 .formGroup p {
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
     position: absolute;
-    left: 198px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     bottom: 32px;
     color: #102948;
 }
 
 .formGroup a {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     color: #fff;
     position: absolute;
-    left: 367px;
+    left: 280px;
     bottom: 32px;
 }
 
 ::placeholder {
-    color: #fff;
+    color: #676565;
 }
 
 input:focus {
@@ -152,7 +161,7 @@ input:hover {
     border-radius: 20px;
     border-style: none;
     background-color: #102948;
-    color: #fff;
+    color: #ffffff;
     font-weight: 600;
     font-size: 15px;
 }

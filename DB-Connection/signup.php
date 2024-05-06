@@ -51,7 +51,7 @@
         <br><br>
         <div class="formGroup">
             <p>Have an account ? |</p>
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
         </div>
     </div>
 
@@ -61,7 +61,6 @@
     </div>
 
 
-    
     <script src="index.js"></script>
     <script>
         function signup() {
@@ -87,16 +86,16 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.text())
-            .then(data => {
-                alert(data); // Display response from PHP script
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Display response from PHP script
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         }
     </script>
-    
+
 </body>
 
 </html>

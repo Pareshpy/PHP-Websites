@@ -47,8 +47,8 @@
             </div>
         </form>
         <div class="formGroup">
-            <p style="left: 170px;bottom: 70px;">Not have a account ? |</p>
-            <a style="left: 361px;bottom: 70px;" href="signup.php">Sign up</a>
+            <p>Not have a account ? |</p>
+            <a style="left: 288px" href="signup.php">Sign up</a>
         </div>
     </div>
 

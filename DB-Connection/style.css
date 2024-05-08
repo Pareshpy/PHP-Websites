@@ -12,7 +12,6 @@ body {
     background-image: url('../DB-Connection/Photos/image-1.png');
     background-size: cover;
     background-position: center;
-    font-size: 15px;
 }
 
 .header {
@@ -132,7 +131,7 @@ body {
     text-decoration: none;
     color: #fff;
     position: absolute;
-    left: 280px;
+    left: 337px;
     bottom: 32px;
 }
 

@@ -12,6 +12,7 @@ body {
     background-image: url('../DB-Connection/Photos/image-1.png');
     background-size: cover;
     background-position: center;
+    font-size: 15px;
 }
 
 .header {
@@ -177,8 +178,8 @@ input:hover {
     position: fixed;
     bottom: 20px;
     right: 2px;
-    width: 7%;
-    height: 33px;
+    width: 9%;
+    height: 35px;
     border-radius: 34px;
     cursor: pointer;
     color: #fff;

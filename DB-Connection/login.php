@@ -1,63 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// Include the database connection script
+include 'connection.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaf Login</title>
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
-</head>
+// Retrieve the email and password from the form submission
+$email = $_POST['email'] ?? null;
+$password = $_POST['password'] ?? null;
 
-<body>
-    <header class="header">
-        <a href="home.php" class="logo">Leaf
-            <img class="Leaf" src="../DB-Connection/Photos/logo.png" alt="">
-        </a>
-        <nav class="navbar">
-            <a href="signup.php">Sign Up</a>
-            <a href="login.php">Login</a>
-            <a href="#">Courses</a>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-        </nav>
-    </header>
-    <div class="container glass" style="height: 500px;">
-        <form name="form" action="checklogin.php" method="POST">
-            <div class="form">
-                <br>
-                <br>
-                <h1>Login to Leaf Village</h1>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="formGroup">
-                <input type="text" name="username" id="email" placeholder="Email" autocomplete="off">
-            </div>
-            <div class="formGroup">
-                <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">
-                <!-- <button id="showPasswordBtn">Show Password</button>  need java script will add it later-->
-            </div>
-            <br>
-            <div class="formGroup">
-                <button class="signup" value="login" name="submit">
-                    Login
-                </button>
-            </div>
-        </form>
-        <div class="formGroup">
-            <p>Not have a account ? |</p>
-            <a href="signup.php">Sign up</a>
-        </div>
-    </div>
+// Check if both email and password are provided
+if ($email && $password) {
+    // Prepare a SELECT query to find the user with the provided email
+    $stmt = $conn->prepare("SELECT password FROM user_form WHERE email = ?");
+    
+    // Bind the email parameter
+    $stmt->bind_param("s", $email);
+    
+    // Execute the query
+    $stmt->execute();
+    
+    // Bind the result to a variable
+    $stmt->bind_result($hashedPassword);
+    
+    // Check if a result was returned
+    if ($stmt->fetch()) {
+        // Compare the provided password with the hashed password in the database
+        if (password_verify($password, $hashedPassword)) {
+            // Successful login
+            echo "Login successful! Welcome back!";
+            // Here you can implement further actions like redirecting the user to a dashboard or setting session variables.
+        } else {
+            // Password does not match
+            echo "Incorrect password. Please try again.";
+        }
+    } else {
+        // No user found with the provided email
+        echo "No account found with that email. Please try again.";
+    }
+    
+    // Close the statement
+    $stmt->close();
+} else {
+    echo "Please enter both email and password.";
+}
 
-    <!-- Chat Box -->
-    <div class="chatBox glass">
-        Chat with us
-    </div>
-
-    <script src="index.js"></script>
-</body>
-
-</html>
+// Close the database connection
+$conn->close();
+?>

@@ -33,7 +33,7 @@
                 <br>
             </div>
             <div class="formGroup">
-                <input type="text" name="username" id="user name" placeholder="User Name" autocomplete="off">
+                <input type="text" name="username" id="email" placeholder="Email" autocomplete="off">
             </div>
             <div class="formGroup">
                 <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">

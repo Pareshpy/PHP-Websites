@@ -1,8 +1,3 @@
-<?php
-
-include ("connection.php");
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,9 +30,16 @@ include ("connection.php");
             <h1>Join Leaf Village</h1>
             <br>
         </div>
-        <form id="signupForm">
+        <form id="signupForm" method="post">
+            <?php
+                if (isset($error)){
+                    foreach( $error as $error ){
+                        echo '<span "class = "error-msg">'.$error.'</span>';
+                    };
+                };
+            ?>
             <div class="formGroup">
-                <input type="text" name="username" id="username" placeholder="User Name" autocomplete="off">
+                <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
             </div>
             <div class="formGroup">
                 <input type="email" name="email" id="email" placeholder="Email ID" autocomplete="off">
@@ -51,7 +53,7 @@ include ("connection.php");
             </div>
             <br>
             <div class="formGroup">
-                <button type="button" class="signup" onclick="signup()">Signup</button>
+                <button type="button" class="signup" name="signup" onclick="signup()">Signup</button>
             </div>
         </form>
         <br><br>

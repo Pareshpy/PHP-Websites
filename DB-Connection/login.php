@@ -25,8 +25,12 @@ if ($email && $password) {
         // Compare the provided password with the hashed password in the database
         if (password_verify($password, $hashedPassword)) {
             // Successful login
-            echo "Login successful! Welcome back!";
-            // Here you can implement further actions like redirecting the user to a dashboard or setting session variables.
+            
+            // Redirect the user to the welcome page
+            header('Location: welcome.php');
+            
+            // Stop further script execution after the redirection
+            exit();
         } else {
             // Password does not match
             echo "Incorrect password. Please try again.";

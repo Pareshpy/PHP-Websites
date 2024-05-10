@@ -21,7 +21,7 @@
         <nav class="navbar">
             <a href="signup.html">Sign Up</a>
             <a href="login.html">Login</a>
-            <a href="#">Courses</a>
+            <a href="registration.html">Courses</a>
             <a href="#">Contact Us</a>
             <a href="#">About Us</a>
         </nav>

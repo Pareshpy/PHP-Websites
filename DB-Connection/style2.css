@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left:70px ;
+    margin-right: 70px;
+    font-size: 15px;
+}
+.item{
+    width: 25px;
+    height: 25px;
+    /* background-color: rgb(98, 67, 224); */
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    flex-grow: 1; 
+}
+.item1{
+    flex-grow: 0.2;
+}
+.item2{
+    flex-grow: 20;
+}
+.item3{
+    flex-grow: 7;
+}

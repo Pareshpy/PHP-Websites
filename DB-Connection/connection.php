@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // Update this with your database username
-$password = ""; // Update this with your database password
-$database = "leafvillage"; // Update this with your database name
+$username = "root"; 
+$password = ""; 
+$database = "leafvillage"; 
 
 // Establish a connection
 $conn = new mysqli($servername, $username, $password, $database);

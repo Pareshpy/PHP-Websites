@@ -1,5 +1,5 @@
-<?php 
-    include("connection.php");
+<?php
+include ("connection.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,13 @@
             <a href="#">Contact Us</a>
             <a href="#">About Us</a>
         </nav>
+        <p class="container glass">
+            LeafVillage Coaching Center is a renowned institution dedicated to fostering academic excellence and
+            personal growth in students. With a commitment to providing quality education, LeafVillage offers a variety
+            of programs tailored to meet the diverse needs of students. The coaching center focuses on delivering
+            comprehensive guidance and support, helping students to excel in their academic pursuits, competitive exams,
+            and extracurricular activities.
+        </p>
 
         <!-- Chat Box -->
         <div class="chatBox glass">
